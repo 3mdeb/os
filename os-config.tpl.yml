@@ -25,6 +25,7 @@ rancher:
   {{- if eq "true" .AZURE_SERVICE}}
     waagent: true
   {{- end}}
+    qemu-guest-agent: true
   bootstrap:
     bootstrap:
       image: {{.OS_REPO}}/os-bootstrap:{{.VERSION}}{{.SUFFIX}}
