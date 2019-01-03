@@ -378,13 +378,6 @@ rancher:
       volumes:
       - /sys:/host/sys
       - /var/lib/system-docker:/var/lib/system-docker:shared
-    qemu-guest-agent:
-      image: {{.OS_REPO}}/os-qemuguestagent:v1.4.0-rc1
-      command: /usr/bin/qemu-ga
-      restart: always
-      labels:
-        io.rancher.os.scope: system
-        io.rancher.os.after: network
   system_docker:
     exec: true
     storage_driver: overlay2

@@ -46,6 +46,7 @@ BUG_REPORT_URL="https://github.com/rancher/os/issues"
 BUILD_ID=
 HERE
 
+cache_services "q/qemu-guest-agent.yml"
 # cache os-services yml file
 for file in $(ls .make-*); do
     case $file in
